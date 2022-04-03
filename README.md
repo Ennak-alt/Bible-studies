@@ -1,2 +1,2 @@
 # Bible-studies
-Nothing to C here
+**Nothing to *C* here**

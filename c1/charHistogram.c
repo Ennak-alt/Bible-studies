@@ -1,8 +1,8 @@
-// 1-13
+// 1-14
 #include <stdio.h>
 #define IN 1
 #define OUT 0
-#define SIZE 93 // total printable ascii characters
+#define SIZE 93 // total number of printable ascii characters
 // Did not want to count space and such with, to much workz
 int main() {
     char c;
