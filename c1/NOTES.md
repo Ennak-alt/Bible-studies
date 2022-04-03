@@ -26,6 +26,11 @@ To get the size of an array the following can be used:
 Function declarations should be before main, and then implementaition after, this is called the
 "prototype"
 
+Functions are default call by value, it is a copy of the original variable (not call by reference)
+Although it is a different story for arrays, these are not a local copy
+
+The null character `\0` is used to mark the end of a string of characters
+
 - [x] Exercise 1-1
 - [x] Exercise 1-2
 - [x] Exercise 1-3
@@ -41,3 +46,5 @@ Function declarations should be before main, and then implementaition after, thi
 - [x] Exercise 1-13
 - [x] Exercise 1-14
 - [x] Exercise 1-15
+- [x] Exercise 1-16
+- [x] Exercise 1-17
