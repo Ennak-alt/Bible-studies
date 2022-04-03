@@ -21,6 +21,15 @@ To set bold set from 0 to 1 in code "\033[*(0 = normal or 1 = bold)*;33m"
 `int arr[10];`
 `int size = sizeof(arr)/sizeof(arr[0])`
 
-- [x] - Exercise 1-12
-- [x] - Exercise 1-13
-- [x] - Exercise 1-14
+- [x] Exercise 1-1
+- [x] Exercise 1-2
+- [x] Exercise 1-3
+- [x] Exercise 1-4
+- [x] Exercise 1-5
+- [x] Exercise 1-6
+- [x] Exercise 1-7
+- [x] Exercise 1-8
+- [x] Exercise 1-9
+- [x] Exercise 1-10
+- [x] Exercise 1-11
+- [x] Exercise 1-12
