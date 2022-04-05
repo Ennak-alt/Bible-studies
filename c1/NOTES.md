@@ -53,3 +53,7 @@ The `extern` keyword can be used to get global variables
 - [x] Exercise 1-18
 - [x] Exercise 1-19
 - [x] Exercise 1-20
+- [x] Exercise 1-21
+- [x] Exercise 1-22
+- [x] Exercise 1-23
+- [ ] Exercise 1-24

@@ -1,7 +1,6 @@
 #include <stdio.h>
 // Exercise 1-3: Modify to print heading
 
-
 /* print Farhenheit-Celsius table
     for fahr = 0, 20, ..., 300 */
 int main() {

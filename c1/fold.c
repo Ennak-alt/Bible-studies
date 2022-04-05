@@ -2,7 +2,7 @@
 #include <stdio.h>
 #define MAXLINE 1000
 #define FOLDSIZE 5
-// Æ, it good enough, without Æ
+// hmm ja, i guess
 
 int getLine(char[], int);
 void copy (char[], char[]);
@@ -39,30 +39,18 @@ void copy(char to[], char from[]) {
 
 void foldLine (char line[]) {
     int i, j;
+    int offset = 0;
     char tempLine[MAXLINE];
     for (i = j = 0; line[i] != '\0'; ++i, ++j) {
-        if (i % FOLDSIZE == 0 && i != 0 && tempLine[j] != '\n') {
-            if (line[i-1] == ' ' || line[i-1] == '\t') {
-                tempLine[j] = '\n';
-            } else {
-                if (line[i-1] != ' ') {
-                    tempLine[j] = '-';
-                    tempLine[++j] = '\n';
-                    tempLine[++j] = line[i];
-                } else {
-                    tempLine[j] = '\n';
-                    tempLine[++j] = line[i]; 
-                }
+        if (i % FOLDSIZE == 0 && i != 0 && line[j] != '\n') {
+            for(; tempLine[j-1] == ' ' || tempLine[j-1] == '\t'; --j)
+                ;
+            if (line[i] != ' ' && tempLine[j-1] != '\n') {
+                tempLine[j] = '-';
+                j++;
             }
-            // if (tempLine[j] == ' ' || tempLine[j] == '\t') {
-            //     for (; tempLine[j] == ' ' || tempLine[j] == '\t'; --j)
-            //         ;
-            //     tempLine[j] = '\n';
-            // } else {
-            //     tempLine[j] = '-';
-            //     tempLine[++j] = '\n';
-            //     tempLine[++j] = line[i];
-            // }
+            tempLine[j] = '\n';
+            tempLine[++j] = line[i];
         } else 
             tempLine[j] = line[i];
     }
