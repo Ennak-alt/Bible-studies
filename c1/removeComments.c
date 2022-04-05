@@ -4,7 +4,7 @@
 #define IN 0
 #define OUT 1
 
-// Remove comments from a file
+// Remove comments from a file, æh comments
 
 int getLine(char[], int);
 void copy (char[], char[]);
@@ -36,21 +36,13 @@ void removeComments(char input[]) {
     for (i = j = 0; input[i] != '\0'; i++, j++) 
     {
         if (input[i] == '"') 
-        {
-            if (inQuote == IN)
-                inQuote = OUT;
-            else {
-                inQuote = IN;
-            }
-        }
+            inQuote = inQuote == IN ? OUT : IN;
         if (inQuote == OUT && input[i] == '/' && input[i+1] == '/') 
-        {
-            while (input[i] != '\n') {
+            while (input[i] != '\n')
                 ++i;
-            }
-        }
         else if (inQuote == OUT && input[i] == '/' && input[i+1] == '*') 
         {
+            ++i;
             while (input[i+1] != '\0' && !(input[i] == '*' && input[i+1] == '/'))
                 ++i;
             i += 2; 
