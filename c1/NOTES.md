@@ -31,6 +31,8 @@ Although it is a different story for arrays, these are not a local copy
 
 The null character `\0` is used to mark the end of a string of characters
 
+The `extern` keyword can be used to get global variables
+
 - [x] Exercise 1-1
 - [x] Exercise 1-2
 - [x] Exercise 1-3
@@ -48,3 +50,6 @@ The null character `\0` is used to mark the end of a string of characters
 - [x] Exercise 1-15
 - [x] Exercise 1-16
 - [x] Exercise 1-17
+- [x] Exercise 1-18
+- [x] Exercise 1-19
+- [x] Exercise 1-20
