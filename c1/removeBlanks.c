@@ -43,7 +43,6 @@ int getLineNoBlanks(char s[], int lim) {
             else 
                 state = IN;
                 s[i] = ' '; 
-
         }
         else {
             state = OUT;
