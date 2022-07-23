@@ -11,9 +11,24 @@ void test(char testName[], int expected, int ouput) {
   }
 }
 
+/// @brief Check if a char is a hexadecimal
+/// @param c is the char to be checked
+/// @return 1 if true and 0 if false
 int checkIsHex(char c);
+
+/// @brief Calculates 16^n
+/// @param n the exponent
+/// @return 16^n
 int pow16(int n);
+
+/// @brief Converts a single digit to hexadecimal
+/// @param c is the digit to be converted
+/// @return The digit as a number
 int toHex(char c);
+
+/// @brief Converts string to its hexadecimal representation
+/// @param s the string to be converted
+/// @return The hexadecimal number or -1 if an error occurs
 int htoi(char s[]);
 
 int main() {
