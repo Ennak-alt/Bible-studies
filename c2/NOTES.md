@@ -48,3 +48,19 @@ If arguments are declared by a function prototype, the declaration causes automa
 arguments when the function is called. 
 
 Bit masking: `~(~0 << n)` (creates 1's)
+
+With a ternary operator, if the results have different types, the type returned follow the conversion 
+rules.
+
+The order of evaluation is not specified, for example with `x = f() + g()`, the f function call may
+be evaluated before g and vice versa. Similarly the statment:
+```
+printf("%d %d\n", ++n, power(2, n));
+```
+Can give different result with different compilers. There one should be careful when altering states
+in the same line, if for example a function depends on the same variable as another function, but they
+both change it, or it could lead to unintended sideeffects.
+
+Moral of the story: Writing code thaat depends on order of evaluation is a bad programming practice 
+in any language. Naturally, it is necessary to know what things to avoid, but if you don't know how 
+they are done on various machines, you won't be tempted to take advantage of a particular implementation
