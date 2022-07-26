@@ -47,4 +47,4 @@ cast: `(type-name) expression`.
 If arguments are declared by a function prototype, the declaration causes automatic coercien of any 
 arguments when the function is called. 
 
-
+Bit masking: `~(~0 << n)` (creates)

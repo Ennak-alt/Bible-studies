@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+      "*.fs": "fsharp",
+      "test.C": "cpp",
+      "atomic": "c",
+      "bitset": "c",
+      "chrono": "c",
+      "complex": "c"
+    }
+}
