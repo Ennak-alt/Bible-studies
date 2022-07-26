@@ -36,5 +36,7 @@ int setbits(int x, int p, int n, int y) {
   x &= r; // Reset the n bits at position p
   x |= y; // Change the bits to the n rightmost bits in y
 
+  // (x & ~(~(~0 << n) << p)) | ((y & ~(~0 << n)) << p)
+
   return x;
 }
