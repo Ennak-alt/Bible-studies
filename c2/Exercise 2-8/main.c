@@ -19,12 +19,12 @@ int rightrot(int x, int n);
 
 int main() {
 
-  test("INVERT_ONE_BIT", 0b1, rightrot(0b10, 1));
+  test("INVERT_TEST1", 0b1, rightrot(0b10, 1));
 
-  test("INVERT_ONE_BIT", 0b1, rightrot(0b100, 2));
-  test("INVERT_ONE_BIT", 0b1010101, rightrot(0b1010101000, 3));
+  test("INVERT_TEST2", 0b1, rightrot(0b100, 2));
+  test("INVERT_TEST3", 0b1010101, rightrot(0b1010101000, 3));
 
-  test("INVERT_ONE_BIT", 0b1100000000000000000000000000011, rightrot(0b1111, 2));
+  test("INVERT_TEST4", 0b1010000000000000000000000000011, rightrot(0b11101, 3));
 
   return 0;
 }
