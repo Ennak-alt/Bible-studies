@@ -22,6 +22,7 @@ int main() {
   test("TEST_CHANGE_TWO_BITS", 0b1010, setbits(0b0010, 1, 3, 0b101));
   test("TEST_CHANGE_FOUR_BITS", 0b000111, setbits(0b001100, 0, 4, 0b100111));
   test("TEST_CHANGE_BITS_MIDDLE", 0b0011100, setbits(0b0000000, 2, 3, 0b100111));
+  test("TEST_CHANGE_ALTERNATING_BITS", 0b1011, setbits(0b10101, 1, 4, 0b10101));
 
   return 0;
 }
