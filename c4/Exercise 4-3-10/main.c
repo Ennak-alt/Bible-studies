@@ -11,7 +11,8 @@
 #define CLEAR 'c'
 
 #define SIN 'S'
-#define COS 'C'
+#define EXP 'X'
+#define POW '^'
 
 
 int getop(char []);
@@ -49,6 +50,16 @@ int main() {
       case '%':
         op2 = pop();
         push(fmod(pop(), op2));
+        break;
+      case '^':
+        op2 = pop();
+        push(powf(pop(), op2));
+        break;
+      case SIN:
+        push(sin(pop()));
+        break;
+      case EXP:
+        push(exp(pop()));
         break;
       case TOP: 
         num = pop();
