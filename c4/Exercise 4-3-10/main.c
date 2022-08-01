@@ -1,19 +1,20 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#include <ctype.h>
 
 #define MAXOP   100
 #define NUMBER  '0'
+#define VARMAX  26
+#define VAR     '1'
 
-#define TOP 't'
-#define DUPLICATE 'd'
-#define SWAP 's'
-#define CLEAR 'c'
-
-#define SIN 'S'
-#define EXP 'X'
-#define POW '^'
-
+#define TOP       'T'
+#define DUPLICATE 'D'
+#define SWAP      'W'
+#define CLEAR     'C'
+#define SIN       'S'
+#define EXP       'X'
+#define POW       '^'
 
 int getop(char []);
 void push(double);
@@ -23,7 +24,13 @@ void clear(void);
 int main() {
   int type;
   double op2, num, sndNum;
+
   char s[MAXOP];
+
+  double vars[VARMAX];
+  int taken[VARMAX] = {0};
+
+  double lp = 0;
 
   while ((type = getop(s)) != EOF) {
     switch(type) {
@@ -55,6 +62,9 @@ int main() {
         op2 = pop();
         push(powf(pop(), op2));
         break;
+      case '#':
+        push(lp);
+        break;
       case SIN:
         push(sin(pop()));
         break;
@@ -63,7 +73,7 @@ int main() {
         break;
       case TOP: 
         num = pop();
-        printf("Top: %f\n", num);
+        printf("\tTop: %.8g\n", num);
         push(num);
         break;
       case DUPLICATE:
@@ -81,10 +91,21 @@ int main() {
         clear();
         break;
       case '\n':
-        printf("\t%.8g\n", pop());
+        printf("\t%.8g\n", lp = pop());
         break;
       default:
-        printf("error: unknown command %s\n", s);
+        if (islower(type)) {
+          int index = type - 'a';
+          if (taken[index])
+            push(vars[index]);
+          else  {
+            taken[index] = 1;
+            vars[index] = pop();
+          } 
+          break;
+        }
+        else 
+          printf("error: unknown command %s\n", s);
         break;
     }
   }
@@ -116,8 +137,6 @@ double pop(void) {
     return 0.0;
   }
 }
-
-#include <ctype.h>
 
 int getch(void);
 void ungetch(int);
