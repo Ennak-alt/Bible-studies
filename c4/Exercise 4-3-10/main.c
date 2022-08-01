@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <math.h>
 #include <ctype.h>
 
@@ -175,4 +176,13 @@ void ungetch(int c) {
     printf("ungetch: too many characters\n");
   else 
     buf[bufp++] = c;
+}
+
+void ungets(char s[]) {
+  int totallength = strlen(s) + bufp;
+  if (totallength >= BUFSIZE) 
+    printf("ungets: too many characters\n");
+  else 
+    for (int i = 0; bufp < totallength; bufp++, i++)
+      buf[bufp] = s[i];
 }
