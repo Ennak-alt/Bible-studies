@@ -110,6 +110,7 @@ int main() {
         break;
     }
   }
+  printf("\t%.8g\n", lp = pop());
   return 0;
 }
 
@@ -143,12 +144,18 @@ int getch(void);
 void ungetch(int);
 
 int getop(char s[]) {
-  int i, c;
-  while ((s[0] = c = getch()) == ' ' || c == '\t')
-    ;
+  static int c = EOF;
+  int i;
+  if (c == EOF)
+    c = getch();
+  while ((s[0] = c) == ' ' || c == '\t')
+    c = getch();
   s[1] = '\0';
-  if (!isdigit(c) && c != '.') 
-    return c;
+  if (!isdigit(c) && c != '.') {
+    int tmp = c;
+    c = EOF;
+    return tmp;
+  }
   i = 0;
   if (isdigit(c))
     while (isdigit(s[++i] = c = getch()))
@@ -157,8 +164,6 @@ int getop(char s[]) {
     while (isdigit(s[++i] = c = getch()))
       ;
   s[i] = '\0';
-  if (c != EOF)
-    ungetch(c);
   return NUMBER;
 }
 
@@ -176,13 +181,4 @@ void ungetch(int c) {
     printf("ungetch: too many characters\n");
   else 
     buf[bufp++] = c;
-}
-
-void ungets(char s[]) {
-  int totallength = strlen(s) + bufp;
-  if (totallength >= BUFSIZE) 
-    printf("ungets: too many characters\n");
-  else 
-    for (int i = 0; bufp < totallength; bufp++, i++)
-      buf[bufp] = s[i];
 }
