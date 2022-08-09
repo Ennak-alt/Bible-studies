@@ -49,13 +49,17 @@ If the filename that is included is quoted, searching for the file typically beg
 program was found, if it is not found there, or if the name is enclosed in < and >, searching follows
 an implementation-defined rule to find the file.
 
-Macro substitution is by `#define`. Normally the replacement text is the res of the line, but a long definition may be continued onto several lines by placing a \ at the end of each line to be continued. `#define` works from the definition to the end of the source file. It is also possible to define macros with arguments, so the replacement text can be different for different calls of rhte macro, forexample:
+Macro substitution is by `#define`. Normally the replacement text is the res of the line, but a long 
+definition may be continued onto several lines by placing a \ at the end of each line to be continued.
+ `#define` works from the definition to the end of the source file. It is also possible to define macros 
+ with arguments, so the replacement text can be different for different calls of rhte macro, forexample:
 ```
 #define max(A, B) ((A) > (B) ? (A) : (B))
 ```
 There is some pit falls, for example square(z+1) will not have the desired effect. 
 
-Names may be undefined with #undef, to ensure that a routine is really a function, and not a macro, you can use # in the parameter to make the parameter quoted. It is also possible to concatenate arguements with ## like 
+Names may be undefined with #undef, to ensure that a routine is really a function, and not a macro, 
+you can use # in the parameter to make the parameter quoted. It is also possible to concatenate arguements with ## like 
 ```
 #define paste(front, back) front ## back
 ```
