@@ -39,4 +39,6 @@ to zero. Automatic and register variables have underfined (i.e. garbage) initial
 For external and static variables, the inializer must be a constant expression. For automatic and register 
 variables, it is done each time the function or block is entered.
 
-If there are fewer initalizers for an array than the number speciffied, the missing elements will be zero for external, static and automatic variables.
+If there are fewer initalizers for an array than the number speciffied, the missing elements will be 
+zero for external, static and automatic variables.
+

@@ -20,7 +20,7 @@ int main() {
 }
 
 void reverse(char str[]) {
-  static int i = 0, j;
+  static int i, j;
 
   if (!i)
     j = strlen(str) - 1;
