@@ -59,8 +59,31 @@ definition may be continued onto several lines by placing a \ at the end of each
 There is some pit falls, for example square(z+1) will not have the desired effect. 
 
 Names may be undefined with #undef, to ensure that a routine is really a function, and not a macro, 
-you can use # in the parameter to make the parameter quoted. It is also possible to concatenate arguements with ## like 
+you can use # in the parameter to make the parameter quoted. It is also possible to concatenate arguments 
+with ## like.
 ```
 #define paste(front, back) front ## back
 ```
 which with `paste(name, 1)` creates the token name1.
+
+You can control preprocessing itself with conditional statements that are evaluated during preprocessing.
+The `#if` evalues a constant integer expression (which may not include sizeof, casts, or enum constants). If the expression is non-zero, subsequent lines until an #endif or #elif or #else are included. defined(name) in an `#if` is 1 if the name has been defined, and 0 otherwise
+
+For example, to make sure that the contents of a file hdr.h are included only once:
+```
+#if !defined(HDR)
+#define HDR 
+
+/* contens of hdr.h go here */
+
+#endif
+```
+If this style is used consistently, then each header can itself include any other headers on which it depends, without the user of the header having to deal with interpendence
+This could also have been written as:
+```
+#ifndef HDR
+#define HDR
+
+/* contents of hdr.h go here */
+
+#endif
