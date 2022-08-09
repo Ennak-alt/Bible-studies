@@ -22,7 +22,7 @@ int main() {
 void reverse(char str[]) {
   static int i = 0, j;
 
-  if (i == 0)
+  if (!i)
     j = strlen(str) - 1;
 
   if (i > j) {
