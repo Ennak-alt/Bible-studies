@@ -42,3 +42,21 @@ variables, it is done each time the function or block is entered.
 If there are fewer initalizers for an array than the number speciffied, the missing elements will be 
 zero for external, static and automatic variables.
 
+`#include` to include the contents of a file during compilation and `#define` to replace a token by 
+an arbitrary sequence of characters.¨
+
+If the filename that is included is quoted, searching for the file typically begins where the source 
+program was found, if it is not found there, or if the name is enclosed in < and >, searching follows
+an implementation-defined rule to find the file.
+
+Macro substitution is by `#define`. Normally the replacement text is the res of the line, but a long definition may be continued onto several lines by placing a \ at the end of each line to be continued. `#define` works from the definition to the end of the source file. It is also possible to define macros with arguments, so the replacement text can be different for different calls of rhte macro, forexample:
+```
+#define max(A, B) ((A) > (B) ? (A) : (B))
+```
+There is some pit falls, for example square(z+1) will not have the desired effect. 
+
+Names may be undefined with #undef, to ensure that a routine is really a function, and not a macro, you can use # in the parameter to make the parameter quoted. It is also possible to concatenate arguements with ## like 
+```
+#define paste(front, back) front ## back
+```
+which with `paste(name, 1)` creates the token name1.
