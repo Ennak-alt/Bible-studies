@@ -19,7 +19,6 @@ int main() {
   return 0;
 }
 
-// More parameters than one is 
 void reverse(char str[]) {
   static int i = 0, j;
 
