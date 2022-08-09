@@ -12,18 +12,25 @@ int main() {
 
   test("TEST_1", "yrt on si erehT .ton od ro oD .ton yrT", str);
 
+  reverse(str);
+
+  test("TEST_2", "Try not. Do or do not. There is no try", str);
+
   return 0;
 }
 
+// More parameters than one is 
 void reverse(char str[]) {
   static int i = 0, j;
 
   if (i == 0)
     j = strlen(str) - 1;
 
-  if (i > j) 
+  if (i > j) {
+    i = 0;
     return;
-
+  } 
+    
   char c = str[i];
 
   str[i++] = str[j];
