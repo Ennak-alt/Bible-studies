@@ -2,7 +2,6 @@
 #include <ctype.h>
 #include "getch.h"
 
-
 /* getint: get next integer from input into *pn */
 int getint(int *pn) {
   int c, sign;
