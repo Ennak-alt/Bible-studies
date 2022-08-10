@@ -1,0 +1,6 @@
+make --dry-run --keep-going --print-directory
+make: Entering directory `/Users/axelkanne/Documents/C-stuff/Bible-studies'
+make: Leaving directory `/Users/axelkanne/Documents/C-stuff/Bible-studies'
+ 
+make: *** No targets specified and no makefile found.  Stop.
+
