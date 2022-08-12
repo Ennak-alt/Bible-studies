@@ -25,33 +25,33 @@ static int testsucc;
 
 void testi(char testName[], int expected, int ouput) {
   testnumber++;
-  printf("%s: ", testName);
+  printf("%s: \n\t", testName);
   if (expected == ouput) {
     testsucc++;
     changeclr(0);
-    printf("\tSUCCEEDED \n\tExpected: %d\n", expected);
+    printf("SUCCEEDED \n\tExpected: %d\n", expected);
   } else {
     changeclr(1);
-    printf("\tFAILED \n\tExpected: \"%d\" but got \"%d\" \n", expected, ouput);
+    printf("FAILED \n\tExpected: \"%d\" but got \"%d\" \n", expected, ouput);
   }
   changeclr(-1);
 }
 
 void tests(char testName[], char expected[], char ouput[]) {
   testnumber++;
-  printf("%s: ", testName);
+  printf("%s: \n\t", testName);
   if (!strcmp(expected, ouput)) {
     testsucc++;
     changeclr(0);
-    printf("\tSUCCEEDED \n\tExpected: %s\n", expected);
+    printf("SUCCEEDED \n\tExpected: %s\n", expected);
   } else {
     changeclr(1);
-    printf("\tFAILED \n\tExpected: \"%s\" but got \"%s\" \n", expected, ouput);
+    printf("FAILED \n\tExpected: \"%s\" but got \"%s\" \n", expected, ouput);
   }
   changeclr(-1);
 }
 
-void testreset() {
+void testreset(void) {
   testnumber = testsucc = 0;
 }
 
