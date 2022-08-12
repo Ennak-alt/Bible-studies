@@ -17,4 +17,5 @@ int main() {
   testi("test7", 1, strend("Hello world!", "Hello world!"));
 
   testresult();
+  return 0;
 }
