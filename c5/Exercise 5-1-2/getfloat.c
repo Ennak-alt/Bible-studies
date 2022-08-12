@@ -26,8 +26,8 @@ int getfloat(double *pn) {
     printf("YEA");
     c = getch();
     double temp = 0.0;
-    for (int i = 10; isdigit(c); c = getch(), i *= 10) 
-      temp += (double)(c - '0') / (double)i;
+    for (int i = 10.0; isdigit(c); c = getch(), i *= 10.0) 
+      temp += (double)(c - '0') / i;
     *pn += temp;
   }
   *pn *= sign;
