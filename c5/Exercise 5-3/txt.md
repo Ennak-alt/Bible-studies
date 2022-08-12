@@ -1,0 +1,1 @@
+Write a pointer version of the function strcat that we showwed in chapter 2: strcat(s,t) copies the string t to the end of s.

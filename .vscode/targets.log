@@ -10,7 +10,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 make: *** No rule to make target `all'.  Stop.
 
 
-# Make data base, printed on Wed Aug 10 09:27:15 2022
+# Make data base, printed on Fri Aug 12 14:21:26 2022
 
 # Variables
 
@@ -29,7 +29,6 @@ CURDIR := /Users/axelkanne/Documents/C-stuff/Bible-studies
 # makefile
 SHELL = /bin/sh
 # environment
- 
 VSCODE_NLS_CONFIG = {"locale":"da","availableLanguages":{},"_languagePackSupport":true}
 # environment
 _ = /usr/bin/make
@@ -158,9 +157,9 @@ VSCODE_PID = 81395
 
 # Directories
 
-# . (device 16777231, inode 23598507): 10 files, no impossibilities.
+# . (device 16777231, inode 23598507): 12 files, no impossibilities.
 
-# 10 files, no impossibilities in 1 directories.
+# 12 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -232,6 +231,6 @@ GNUmakefile:
 # strcache size: total = 0 / max = 0 / min = 4096 / avg = 0
 # strcache free: total = 0 / max = 0 / min = 4096 / avg = 0
 
-# Finished Make data base on Wed Aug 10 09:27:15 2022
+# Finished Make data base on Fri Aug 12 14:21:26 2022
 
  
