@@ -5,6 +5,7 @@
       "atomic": "c",
       "bitset": "c",
       "chrono": "c",
-      "complex": "c"
+      "complex": "c",
+      "test.h": "c"
     }
 }

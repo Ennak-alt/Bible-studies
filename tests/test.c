@@ -29,10 +29,10 @@ void testi(char testName[], int expected, int ouput) {
   if (expected == ouput) {
     testsucc++;
     changeclr(0);
-    printf("SUCCEEDED \n\tExpected: %d\n", expected);
+    printf("\tSUCCEEDED \n\tExpected: %d\n", expected);
   } else {
     changeclr(1);
-    printf("FAILED \n\tExpected: \"%d\" but got \"%d\" \n", expected, ouput);
+    printf("\tFAILED \n\tExpected: \"%d\" but got \"%d\" \n", expected, ouput);
   }
   changeclr(-1);
 }
