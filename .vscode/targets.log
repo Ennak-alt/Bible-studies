@@ -10,7 +10,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 make: *** No rule to make target `all'.  Stop.
 
 
-# Make data base, printed on Fri Aug 12 18:52:03 2022
+# Make data base, printed on Sat Aug 13 12:32:31 2022
 
 # Variables
 
@@ -35,7 +35,6 @@ _ = /usr/bin/make
 # makefile
 MAKEFILE_LIST := 
 # environment
- 
 __CFBundleIdentifier = com.microsoft.VSCode
 # environment
 INFOPATH = /opt/homebrew/share/info:
@@ -184,7 +183,6 @@ all:
 #  File has not been updated.
 
 # Not a target:
- 
 Makefile:
 #  A default, MAKEFILES, or -include/sinclude makefile.
 #  Implicit rule search has been done.
@@ -233,6 +231,6 @@ GNUmakefile:
 # strcache size: total = 0 / max = 0 / min = 4096 / avg = 0
 # strcache free: total = 0 / max = 0 / min = 4096 / avg = 0
 
-# Finished Make data base on Fri Aug 12 18:52:03 2022
+# Finished Make data base on Sat Aug 13 12:32:31 2022
 
  

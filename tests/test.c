@@ -29,7 +29,7 @@ void testi(char testName[], int expected, int ouput) {
   if (expected == ouput) {
     testsucc++;
     changeclr(0);
-    printf("SUCCEEDED \n\tExpected: %d\n", expected);
+    printf("SUCCEEDED \n\tExpected: \"%d\"\n", expected);
   } else {
     changeclr(1);
     printf("FAILED \n\tExpected: \"%d\" but got \"%d\" \n", expected, ouput);
@@ -43,7 +43,7 @@ void tests(char testName[], char expected[], char ouput[]) {
   if (!strcmp(expected, ouput)) {
     testsucc++;
     changeclr(0);
-    printf("SUCCEEDED \n\tExpected: %s\n", expected);
+    printf("SUCCEEDED \n\tExpected: \"%s\"\n", expected);
   } else {
     changeclr(1);
     printf("FAILED \n\tExpected: \"%s\" but got \"%s\" \n", expected, ouput);
