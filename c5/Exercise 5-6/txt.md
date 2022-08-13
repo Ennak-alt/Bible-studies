@@ -1,0 +1,1 @@
+Rewrite appropriate programs from earlier chapters and exercises with pointers instead of array indexing. Good possibilities include getline (chapters 1 and 4), atio, itoa, and their variants, reverse (chapter 3) and strindex and getop (chapter 4).
