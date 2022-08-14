@@ -43,7 +43,7 @@ static char allocbuf[ALLOCSIZE]; /* storage for alloc */
 static char *allocp = allocbuf; /* next free position */
 
 char *alloc(int n) {
-  if (allocbuf + ALLOCSIZE - allocp <= n) { /* it fits */
+  if (allocbuf + ALLOCSIZE - allocp >= n) { /* it fits */
     allocp += n;
     return allocp - n; /* old p */
   } else  /* not enough room */
@@ -60,4 +60,6 @@ Pointers may be compared under certain cicumstances. If p and q pointer to membe
 
 # Character pointers and functions
 A string constant written as `"I am a string"`, is an array of characters.
+
+
 
