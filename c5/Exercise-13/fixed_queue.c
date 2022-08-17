@@ -7,10 +7,10 @@
 static char storage[STORESIZE];
 static char *nxta = storage;
 static char *nxtd = NULL; 
-static char *end = storage+STORESIZE; // pointer to end of storage
+static char *end = storage+STORESIZE;
 
-static int qi = 0; // elment to delete
-static int max; // max number of elements
+static int qi = 0;
+static int max; 
 
 static void freeq(char **queue, int max) {
   nxtd = queue[((qi+1) % max)];

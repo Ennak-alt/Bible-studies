@@ -61,5 +61,11 @@ Pointers may be compared under certain cicumstances. If p and q pointer to membe
 # Character pointers and functions
 A string constant written as `"I am a string"`, is an array of characters.
 
+# Pointers vs. Multi-dimensional Arrays
+The important advantage of the pointer array is that the rows of the array may be of different lengths. The most frequent use of arrays of pointers is to store character strings of diverse lengths, as in the function month_name.
+
+# Commandline arguments
+Argc is argument count, argv is the argument vector, which is a pointer to an array of character strings. argv[0] is the name by which the program was invoked, so argc is at least 1. Minus sign is a common convention for an optional flag 
+
 
 
