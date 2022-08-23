@@ -65,7 +65,10 @@ A string constant written as `"I am a string"`, is an array of characters.
 The important advantage of the pointer array is that the rows of the array may be of different lengths. The most frequent use of arrays of pointers is to store character strings of diverse lengths, as in the function month_name.
 
 # Commandline arguments
-Argc is argument count, argv is the argument vector, which is a pointer to an array of character strings. argv[0] is the name by which the program was invoked, so argc is at least 1. Minus sign is a common convention for an optional flag 
+Argc is argument count, argv is the argument vector, which is a pointer to an array of character strings. argv[0] is the name by which the program was invoked, so argc is at least 1. Minus sign is a common convention for an optional flag.
+
+# Pointers to functions
+`int (*comp)(void *, void *)`, this say in the parameter that comp is a pointer to a function that has two void * arguments and returns an int, then it can be used like: `if ((*comp)(v[i], v[left]) < 0)`. comp is a pointer to a function, *comp is the function, and `(*comp)(v[i], v[left])`. `int *comp(void *, void *)` would meant that comp is a function returning a pointer to an int, which is very different.
 
 
 
