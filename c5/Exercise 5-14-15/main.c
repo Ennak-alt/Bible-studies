@@ -12,11 +12,13 @@ int numcmp(char *, char *);
 int strcmp_(char *, char *);
 int strcmp_ignorecase(char *, char *);
 
+int fold = 0;
+int directory = 0;
+
 /* sort input lines */
 int main(int argc, char *argv[]) {
   int nlines;
   int numeric = 0;
-  int fold = 0;
   int reverse = 1;
 
   while (--argc > 0) {
@@ -32,11 +34,14 @@ int main(int argc, char *argv[]) {
         case 'f':
           fold = 1;
           break;
+        case 'd':
+          directory = 1;
+          break;
       }
   }
   if ((nlines = readlines(lineptr, MAXLINES)) >= 0) {
     qsort_((void **) lineptr, 0, nlines-1, reverse,
-      (int (*)(void*,void*))(numeric ? numcmp : (fold ? strcmp_ignorecase : strcmp_)));
+      (int (*)(void*,void*))(numeric ? numcmp : strcmp_));
     writelines(lineptr, nlines);
     return 0;
   } else {
@@ -65,10 +70,23 @@ void qsort_(void *v[], int left, int right, int reverse,
 }
 
 int strcmp_(char *s, char *t) {
-  for ( ; *s == *t; s++, t++)
+  if (directory) {
+    while(!isalnum(*s) && !isblank(*s))
+      s++;
+    while(!isalnum(*t) && !isblank(*t))
+      t++;  
+  }
+  for ( ; *s == *t || (fold && tolower(*s) == tolower(*t)); s++, t++) {
+    if (directory) {
+      while (!isalnum(*(s+1)) && !isblank(*(s+1)))
+        s++;
+      while (!isalnum(*(t+1)) && !isblank(*(t+1)))
+        t++;
+    }
     if (*s == '\0')
       return 0;
-  return *s - *t;
+  }
+  return fold ? tolower(*s) - tolower(*t) : *s - *t;
 }
 
 int strcmp_ignorecase(char *s, char *t) {
