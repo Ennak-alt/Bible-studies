@@ -1,0 +1,15 @@
+Zebraedderkop|Salticus scenicus|6 mm|5 mm
+Stor springedderkop|Marpissa muscosa|8-10 mm|6-8 mm
+Smaragdedderkop|Micrommata virescens|12-15 mm|8-10 mm
+Jagtedderkop|Pardosa lugubris|6 mm|5 mm
+Rovedderkop|Pisaura mirabilis|13-15 mm|10-12 mm
+Hul-hjulspinder|Meta segmentata|5-8 mm|5-6 mm
+Grøn hjulspinder|Araniella cucurbitina|6 mm|4 mm
+Bark-edderkop|Nuctenea umbratica|14 mm|9 mm
+Korsedderkop|Araneus diadematus|12 mm|8 mm 
+Sektor-edderkop|Zygiella atrica|6 mm|5 mm
+Huskartespinder|Amaurobius fenestralis|7-9 mm|5-7 mm 
+Lille krustraadspinder|Dictyna arundinacea|3.5 mm|3 mm
+Snubletraad-edderkop|Segestria senoculata|7-10 mm|6-7 mm
+Trekantspinder|Hyptiotes paradoxus|6 mm|4 mm
+Kugleedderkop|Enoplogatha ovata|5 mm|4 mm 
