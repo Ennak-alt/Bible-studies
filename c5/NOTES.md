@@ -70,5 +70,15 @@ Argc is argument count, argv is the argument vector, which is a pointer to an ar
 # Pointers to functions
 `int (*comp)(void *, void *)`, this say in the parameter that comp is a pointer to a function that has two void * arguments and returns an int, then it can be used like: `if ((*comp)(v[i], v[left]) < 0)`. comp is a pointer to a function, *comp is the function, and `(*comp)(v[i], v[left])`. `int *comp(void *, void *)` would meant that comp is a function returning a pointer to an int, which is very different.
 
+# Complicated Declarations
+```c
+char **argv         // pointer to pointer to char
+int (*daytab)[13]   // pointer to array[13] of int
+int *daytab[13]     // array[13] of pointer to int
+void *comp()        // function returning pointer to void
+void (*comp)()      // pointer to function returning void
+char (*(*x())[])()  // function returning pointer to array[] of pointer to function returning char
+char (*(*x[3])())[5]// array[3] of pointer to function returning pointer to array[5] of char
+```
 
 
