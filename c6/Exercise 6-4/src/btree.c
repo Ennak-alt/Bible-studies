@@ -37,7 +37,7 @@ struct tnode *copynode(struct tnode *p, struct tnode *p2) {
         p->count = p2->count;
         p->left = p->right = NULL;
     }
-    else if (p->count - p2->count > 0)
+    else if (p->count - p2->count < 0)
         p->left = copynode(p->left, p2);
     else
         p->right = copynode(p->right, p2);
